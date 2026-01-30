@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Saya</title>
+    <style>
+        /* --- CSS Sederhana (Bagian Desain) --- */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            line-height: 1.6;
+            background-color: #ffffff;
+        }
+
+        /* Container utama menggunakan Flexbox untuk membagi 2 kolom */
+        .container {
+            display: flex;
+            max-width: 1200px;
+            margin: 0 auto;
+            min-height: 100vh;
+        }
+
+        /* Bagian Kiri: Konten Utama (Isi Portofolio) */
+        main {
+            flex: 3; /* Mengambil porsi lebih besar (75%) */
+            padding: 60px 80px;
+        }
+
+        /* Bagian Kanan: Sidebar (Menu Navigasi) */
+        aside {
+            flex: 1; /* Mengambil porsi lebih kecil (25%) */
+            background-color: #f8f9fa; /* Warna abu-abu sangat muda */
+            padding: 60px 40px;
+            border-left: 1px solid #e0e0e0;
+            text-align: right; /* Teks rata kanan sesuai permintaan */
+            
+            /* Agar menu tetap diam saat discroll (Sticky) */
+            position: sticky;
+            top: 0;
+            height: 100vh;
+        }
+
+        /* Gaya Navigasi */
+        nav ul {
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-bottom: 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #555;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #000; /* Warna saat mouse diarahkan */
+            text-decoration: underline;
+        }
+
+        /* Gaya Konten */
+        section {
+            margin-bottom: 80px; /* Jarak antar bagian */
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #333;
+            display: inline-block;
+        }
+
+        p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        /* Kotak Projek */
+        .project-item {
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            transition: box-shadow 0.3s;
+        }
+
+        .project-item:hover {
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .project-title {
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        /* Responsif untuk HP (Layar Kecil) */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column-reverse; /* Menu pindah ke atas di HP */
+            }
+            aside {
+                width: 100%;
+                height: auto;
+                text-align: center;
+                border-left: none;
+                border-bottom: 1px solid #e0e0e0;
+                padding: 20px;
+                position: relative;
+            }
+            main {
+                padding: 40px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <main>
+            <section id="intro">
+                <h1>Halo, saya [Namamu].</h1>
+                <p>Saya adalah seorang mahasiswa / desainer / penulis yang menyukai hal-hal simpel.</p>
+                <p>Selamat datang di portofolio digital saya. Di sini saya menyimpan catatan projek dan pemikiran saya.</p>
+            </section>
+
+            <section id="projek">
+                <h2>Projek Pilihan</h2>
+                
+                <div class="project-item">
+                    <div class="project-title">1. Nama Projek Pertama</div>
+                    <p>Jelaskan sedikit tentang projek ini. Misalnya: "Aplikasi pencatat keuangan yang dibuat menggunakan Python."</p>
+                    <a href="#">Lihat detail &rarr;</a>
+                </div>
+
+                <div class="project-item">
+                    <div class="project-title">2. Nama Projek Kedua</div>
+                    <p>Deskripsi projek kedua. "Sebuah esai tentang teknologi masa depan yang dimuat di majalah kampus."</p>
+                    <a href="#">Lihat detail &rarr;</a>
+                </div>
+            </section>
+
+            <section id="kontak">
+                <h2>Hubungi Saya</h2>
+                <p>Tertarik bekerja sama? Silakan kirim pesan melalui:</p>
+                <ul>
+                    <li>Email: emailmu@gmail.com</li>
+                    <li>Instagram: @namamu</li>
+                    <li>LinkedIn: linkedin.com/in/namamu</li>
+                </ul>
+            </section>
+        </main>
+
+
+        <aside>
+            <nav>
+                <ul>
+                    <li><a href="#intro">Beranda</a></li>
+                    <li><a href="#projek">Projek</a></li>
+                    <li><a href="#kontak">Kontak</a></li>
+                </ul>
+            </nav>
+            <br>
+            <p style="font-size: 0.9rem; color: #888;">© 2024 [Namamu]</p>
+        </aside>
+
+    </div>
+
+</body>
+</html>
